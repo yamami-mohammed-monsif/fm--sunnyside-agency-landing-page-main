@@ -166,7 +166,7 @@ header {
     gap: min(5vw, 2.5rem);
     align-items: center;
     flex-direction: column;
-    /* display: none; */
+
     position: absolute;
     inset: 20% 8%;
 
@@ -175,12 +175,18 @@ header {
     padding-block: 2rem;
 
     z-index: 99999;
+    display: none;
+}
+
+.nav-links[data-visible = 'true'] {
+    display: flex;
 }
 
 .contact {
     color: var(--clr-neutral-500);
     background-color: var(--clr-primary-500);
     font-family: var(--ff-headings);
+    text-transform: uppercase;
 
     padding: .3rem 1.3rem;
     border-radius: 10rem;
@@ -244,6 +250,11 @@ h3 {
     right: 7%;
 }
 
+.learn-more {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* testimonials */
 
 .testimonials h3 {
@@ -305,6 +316,10 @@ footer nav {
     margin-inline: auto;
 }
 
+footer nav a:hover {
+    color: var(--clr-neutral-100);
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -317,6 +332,12 @@ footer nav {
     /* header */
     .nav-links {
         display: flex;
+        flex-direction: row;
+        position: static;
+
+        background: none;
+        color: var(--clr-neutral-100);
+        padding: 0;
     }
 
     .hamburger-button {
@@ -326,6 +347,7 @@ footer nav {
     .contact {
         background-color: var(--clr-neutral-100);
     }
+
 
     /* main */
 
