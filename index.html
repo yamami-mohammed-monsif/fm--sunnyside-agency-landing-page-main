@@ -6,24 +6,35 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- header -->
-  <header>
+  <header class="text-white">
     <div class="container">
-      <nav>
+      <nav class="navigation">
+        <!-- logo -->
         <div>
           <a href="#">
             <img src="images/logo.svg" alt="Logo">
           </a>
         </div>
         <!-- hamburger-button -->
-        <button>
+        <button class="hamburger-button" aria-controls="nav-links">
           <img src="images/icon-hamburger.svg" alt="">
         </button>
 
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links" data-visible="false">
           <a href="#">About</a>
           <a href="#">Services</a>
           <a href="#">Projects</a>
@@ -31,146 +42,151 @@
         </div>
       </nav>
 
-      <h1>We are creatives</h1>
+      <h1 class="fw-x-bold">We are creatives</h1>
     </div>
 
-    <img src="images/icon-arrow-down.svg" alt="">
-    <picture>
-      <source srcset="images/desktop/image-header.jpg" media="(min-width: 500px)">
-      <img src="images/mobile/image-header.jpg" alt="">
-    </picture>
+    <img class="arrow-down" src="images/icon-arrow-down.svg" alt="">
   </header>
 
   <!-- main -->
   <main>
     <!-- section-1 -->
-    <section class="grid-two-columns">
+    <section class="section-1 grid-two-columns text-clr-neutral-300">
       <div class="grid-col-1">
         <picture>
           <source srcset="images/desktop/image-transform.jpg" media="(min-width: 500px)">
           <img src="images/mobile/image-transform.jpg" alt="">
         </picture>
       </div>
-      <div class="grid-col-2">
-        <h2>Transform your brand</h2>
-        <p>We are a full-service creative agency specializing in helping brands grow fast. 
+      <div class="grid-col-2 container">
+        <h2 class="text-clr-neutral-500 fw-bold">Transform your brand</h2>
+        <p class="margin-block">We are a full-service creative agency specializing in helping brands grow fast. 
           Engage your clients through compelling visuals that do most of the marketing for you.</p>
-        <button class="learn-more">Learn more</button>
+        <button class="learn-more text-clr-neutral-500 fw-semi-bold">Learn more</button>
       </div>
     </section>
 
     <!-- section-2 -->
-    <section class="grid-two-columns">
+    <section class="section-2 grid-two-columns text-clr-neutral-300">
       <div class="grid-col-1">
         <picture>
           <source srcset="images/desktop/image-stand-out.jpg" media="(min-width: 500px)">
           <img src="images/mobile/image-stand-out.jpg" alt="">
         </picture>
       </div>
-      <div class="grid-col-2">
-        <h2>Stand out to the right audience</h2>
-        <p> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
-        <button>Learn more</button>
+      <div class="grid-col-2 container">
+        <h2 class="text-clr-neutral-500 fw-bold">Stand out to the right audience</h2>
+        <p class="margin-block">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+        <button class="learn-more text-clr-neutral-500 fw-semi-bold">Learn more</button>
       </div>
     </section>
 
     <!-- section-3 -->
     <section class="grid-two-columns">
-      <div class="grid-col-1">
+      <div class="text-clr-primary-300 pos-relative">
         <picture>
           <source srcset="images/desktop/image-graphic-design.jpg" media="(min-width: 500px)">
           <img src="images/mobile/image-graphic-design.jpg" alt="">
         </picture>
-        <h3>Graphic design</h3>
-        <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        <div class="content pos-absolute">
+          <h3 class="fw-bold">Graphic design</h3>
+          <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>
       </div>
-      <div class="grid-col-2">
+      <div class="text-clr-primary-400 pos-relative">
         <picture>
           <source srcset="images/desktop/image-photography.jpg" media="(min-width: 500px)">
           <img src="images/mobile/image-photography.jpg" alt="">
         </picture>
-        <h3>Photography</h3>
-        <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        <div class="content pos-absolute">
+          <h3 class="fw-bold">Photography</h3>
+          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
       </div>
     </section>
 
     <!-- section-4 testimonials -->
     <section class="testimonials">
-      <h3>Client testimonials</h3>
-      <div>
+      <div class="container">
+        <h3 class="text-clr-neutral-200">Client testimonials</h3>
+        <div class="grid-three-columns">
+          <div>
+            <img src="images/image-emily.jpg" alt="">
+            <p class="text-clr-neutral-400 testimonial"> We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+            <p class="client-name fw-bold">Emily R.</p>
+            <p class="client-job text-clr-neutral-200">Marketing Director</p>
+          </div>
+          <div>
+            <img src="images/image-thomas.jpg" alt="">
+            <p class="text-clr-neutral-400 testimonial">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+            <p class="client-name fw-bold">Thomas S.</p>
+            <p class="client-job text-clr-neutral-200">Chief Operating Officer</p>
+          </div>
+          <div>
+            <img src="images/image-jennie.jpg" alt="">
+            <p class="text-clr-neutral-400 testimonial">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <p class="client-name fw-bold">Jennie F.</p>
+            <p class="client-job text-clr-neutral-200">Business Owner</p>
+          </div>
+        </div>
+            </section>
+        
+            <!-- section-5 -->
+            <section class="grid-four-columns">
         <div>
-          <img src="images/image-emily.jpg" alt="">
-          <p> We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-          <p class="client-name">Emily R.</p>
-          <p class="client-job">Marketing Director</p>
+          <picture>
+            <source srcset="images/desktop/image-gallery-milkbottles.jpg" media="(min-width: 500px)">
+            <img src="images/mobile/image-gallery-milkbottles.jpg" alt="">
+          </picture>
         </div>
         <div>
-          <img src="images/image-thomas.jpg" alt="">
-          <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-          <p class="client-name">Thomas S.</p>
-          <p class="client-job">Chief Operating Officer</p>
+          <picture>
+            <source srcset="images/desktop/image-gallery-orange.jpg" media="(min-width: 500px)">
+            <img src="images/mobile/image-gallery-orange.jpg" alt="">
+          </picture>
         </div>
         <div>
-          <img src="images/image-jennie.jpg" alt="">
-          <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-          <p class="client-name">Jennie F.</p>
-          <p class="client-job">Business Owner</p>
+          <picture>
+            <source srcset="images/desktop/image-gallery-cone.jpg" media="(min-width: 500px)">
+            <img src="images/mobile/image-gallery-cone.jpg" alt="">
+          </picture>
         </div>
-      </div>
-    </section>
-
-    <!-- section-5 -->
-    <section class="grid-four-columns">
-      <div>
-        <picture>
-          <source srcset="images/desktop/image-gallery-milkbottles.jpg" media="(min-width: 500px)">
-          <img src="images/mobile/image-gallery-milkbottles.jpg" alt="">
-        </picture>
-      </div>
-      <div>
-        <picture>
-          <source srcset="images/desktop/image-gallery-cone.jpg" media="(min-width: 500px)">
-          <img src="images/mobile/image-gallery-cone.jpg" alt="">
-        </picture>
-      </div>
-      <div>
-        <picture>
-          <source srcset="images/desktop/image-gallery-orange.jpg" media="(min-width: 500px)">
-          <img src="images/mobile/image-gallery-orange.jpg" alt="">
-        </picture>
-      </div>
-      <div>
-        <picture>
-          <source srcset="images/desktop/image-gallery-sugarcubes.jpg" media="(min-width: 500px)">
-          <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="">
-        </picture>
+        <div>
+          <picture>
+            <source srcset="images/desktop/image-gallery-sugarcubes.jpg" media="(min-width: 500px)">
+            <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="">
+          </picture>
+        </div>
       </div>
     </section>
 
     <!-- footer -->
-    <footer>
-      <img src="images/logo.svg" alt="">
-      <div>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-      </div>
-      <div class="social-links">
+    <footer class="bg-primary-200">
+      <div class="container">
         <a href="#">
-          <img src="images/icon-facebook.svg" alt="">
-        </a>
-        <a href="#">
-          <img src="images/icon-instagram.svg" alt="">
-        </a>
-        <a href="#">
-          <img src="images/icon-twitter.svg" alt="">
-        </a>
-        <a href="#">
-          <img src="images/icon-pinterest.svg" alt="">
-        </a>
+          <img src="images/logo -green-text.svg" class="footer-logo" alt="">
+        </a> 
+        <nav class="text-clr-primary-300">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Projects</a>
+        </nav>
+        <div class="social-links">
+          <a href="#">
+            <img src="images/icon-facebook.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="images/icon-instagram.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="images/icon-twitter.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="images/icon-pinterest.svg" alt="">
+          </a>
+        </div>
       </div>
     </footer>
   </main>
-
 </body>
 </html>
